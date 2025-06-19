@@ -33,7 +33,7 @@ To **learn a function** that maps input `X` to output `Y`.
 ### 📏 Evaluation Metrics:
 | Classification Metrics          | Regression Metrics                |
 |----------------------------------|------------------------------------|
-| Accuracy, Precision, Recall, F1  | MSE, RMSE, MAE, R² Score           |
+| Accuracy, Confusion Matrix, Precision, Recall, F1  | MSE, RMSE, MAE, R² Score, Adjusted R² Score |
 
 ---
 
