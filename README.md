@@ -1,157 +1,150 @@
 # 🧠 Types of Machine Learning
 
-Machine Learning (ML) is a branch of Artificial Intelligence (AI) that enables systems to learn patterns from data and make predictions or decisions without being explicitly programmed. Based on the nature of the training signal and feedback available, ML is categorized into the following types:
+Machine Learning (ML) is a subset of Artificial Intelligence (AI) that enables systems to learn patterns from data to make predictions or decisions. ML algorithms can be categorized into:
+
+1. Supervised Learning  
+2. Unsupervised Learning  
+3. Reinforcement Learning  
+4. Semi-Supervised Learning
 
 ---
 
 ## 📘 1. Supervised Learning
 
 ### ✅ Definition:
-Supervised Learning is based on **labeled datasets**, meaning the algorithm is trained on input-output pairs. The model learns to map inputs (features) to the correct output (target).
+Learning from **labeled data** — both inputs and correct outputs are provided.
 
 ### 🎯 Goal:
-To **predict an output** (label) for new, unseen data.
+To **learn a function** that maps input `X` to output `Y`.
 
-### 🔧 Common Algorithms:
-| Algorithm              | Description                                           |
-|------------------------|-------------------------------------------------------|
-| Linear Regression      | Predicts a continuous numerical value.               |
-| Logistic Regression    | Classifies data into binary or multi-class labels.  |
-| Decision Tree          | Tree-based model for classification/regression.      |
-| Random Forest          | Ensemble of decision trees for robust predictions.   |
-| Support Vector Machine (SVM) | Maximizes margin between classes.               |
-| K-Nearest Neighbors (KNN) | Predicts label based on nearest data points.     |
-| Neural Networks        | Mimic human brain with layers and neurons.           |
+---
+
+### 📊 Supervised Task Types
+
+| Task Type     | Description                                    | Common Algorithms                                                |
+|---------------|------------------------------------------------|------------------------------------------------------------------|
+| **Classification** | Predict **discrete** class labels (e.g., spam or not) | ✅ Logistic Regression  <br> ✅ Decision Tree  <br> ✅ Random Forest <br> ✅ Support Vector Machine (SVM) <br> ✅ K-Nearest Neighbors (KNN) <br> ✅ Naive Bayes <br> ✅ Neural Networks |
+| **Regression**     | Predict **continuous** values (e.g., house prices)     | ✅ Linear Regression <br> ✅ Ridge/Lasso Regression <br> ✅ Decision Tree Regressor <br> ✅ Random Forest Regressor <br> ✅ SVR (Support Vector Regression) <br> ✅ XGBoost Regressor <br> ✅ Neural Networks (e.g., MLPRegressor) |
 
 ### 🧪 Use Cases:
-- Email spam classification
-- Disease diagnosis
-- Credit scoring
-- Predicting stock prices
-- Image classification
+- Classification: Email spam detection, disease diagnosis  
+- Regression: Stock price prediction, temperature forecasting
 
-### 📊 Evaluation Metrics:
-| Task Type     | Common Metrics                          |
-|---------------|------------------------------------------|
-| Classification| Accuracy, Precision, Recall, F1 Score, ROC-AUC |
-| Regression    | MSE (Mean Squared Error), RMSE, MAE, R² Score |
+### 📏 Evaluation Metrics:
+| Classification Metrics          | Regression Metrics                |
+|----------------------------------|------------------------------------|
+| Accuracy, Precision, Recall, F1  | MSE, RMSE, MAE, R² Score           |
 
 ---
 
 ## 📙 2. Unsupervised Learning
 
 ### ✅ Definition:
-Unsupervised Learning deals with **unlabeled data**. The algorithm tries to identify hidden patterns or intrinsic structures in the data.
+Learning from **unlabeled data** — only input data `X` is provided.
 
 ### 🎯 Goal:
-To **discover underlying patterns**, groupings, or structures without explicit guidance.
+To **discover patterns, clusters, or structure** within data.
 
-### 🔧 Common Algorithms:
-| Algorithm         | Description                                               |
-|-------------------|-----------------------------------------------------------|
-| K-Means Clustering| Partitions data into K clusters based on distance.       |
-| Hierarchical Clustering | Builds a tree of clusters.                        |
-| DBSCAN             | Density-based clustering to identify core samples.      |
-| PCA (Principal Component Analysis) | Dimensionality reduction technique.    |
-| Autoencoders       | Neural networks for feature learning and compression.   |
-| t-SNE              | Visualizes high-dimensional data in 2D/3D.              |
+---
+
+### 📊 Unsupervised Task Types
+
+| Task Type               | Description                                         | Common Algorithms                                               |
+|-------------------------|-----------------------------------------------------|------------------------------------------------------------------|
+| **Clustering**          | Group similar data points into clusters             | ✅ K-Means <br> ✅ DBSCAN <br> ✅ Agglomerative Clustering <br> ✅ Gaussian Mixture Models (GMM) <br> ✅ Mean Shift |
+| **Dimensionality Reduction** | Reduce number of input features while preserving structure | ✅ PCA (Principal Component Analysis) <br> ✅ t-SNE <br> ✅ LLE (Locally Linear Embedding) <br> ✅ Autoencoders <br> ✅ UMAP |
 
 ### 🧪 Use Cases:
-- Customer segmentation
-- Anomaly detection
-- Market basket analysis
-- Topic modeling (e.g., in NLP)
-- Data compression
+- Clustering: Customer segmentation, anomaly detection  
+- Dimensionality Reduction: Feature compression, data visualization
 
-### 📊 Evaluation Metrics:
-| Task Type   | Common Metrics                            |
-|-------------|--------------------------------------------|
-| Clustering  | Silhouette Score, Davies–Bouldin Index, Calinski-Harabasz Index |
-| Dimensionality Reduction | Variance Explained, Reconstruction Error |
+### 📏 Evaluation Metrics:
+| Clustering Metrics                          | Dimensionality Reduction |
+|---------------------------------------------|---------------------------|
+| Silhouette Score, Davies-Bouldin Index, Calinski-Harabasz | Explained Variance, Reconstruction Error |
 
 ---
 
 ## 📕 3. Reinforcement Learning
 
 ### ✅ Definition:
-Reinforcement Learning is about training agents to make sequences of decisions by **interacting with an environment**. It learns via **trial and error**, receiving **rewards** or **penalties**.
+Involves an **agent** learning through **trial and error** in an **environment**, guided by **rewards** and **penalties**.
 
 ### 🎯 Goal:
-To **maximize cumulative reward** through a sequence of actions.
+To **maximize cumulative reward** over time through learning optimal actions.
 
-### 🔧 Common Algorithms:
-| Algorithm          | Description                                               |
-|--------------------|-----------------------------------------------------------|
-| Q-Learning         | Model-free method to learn optimal policy.               |
-| Deep Q Networks (DQN)| Combines Q-learning with deep neural networks.         |
-| SARSA              | Similar to Q-learning but considers current policy.       |
-| Policy Gradient    | Directly optimizes the policy function.                  |
-| Actor-Critic       | Combines value and policy-based methods.                 |
+---
+
+### 📊 Reinforcement Learning Categories
+
+| Category              | Description                                  | Common Algorithms                                 |
+|------------------------|----------------------------------------------|---------------------------------------------------|
+| **Model-Free Methods** | Learn directly from experience              | ✅ Q-Learning <br> ✅ SARSA <br> ✅ DQN (Deep Q-Networks) |
+| **Policy Optimization**| Directly learn the action policy             | ✅ REINFORCE <br> ✅ Actor-Critic <br> ✅ PPO (Proximal Policy Optimization) <br> ✅ A3C |
 
 ### 🧪 Use Cases:
-- Game playing (e.g., AlphaGo, Atari)
-- Robotics (motion control)
-- Self-driving cars
-- Dynamic pricing
-- Portfolio optimization
+- Self-driving cars  
+- Game playing (e.g., AlphaGo, Atari)  
+- Robotic control  
+- Automated trading systems
 
-### 📊 Evaluation Metrics:
-| Metric               | Description                             |
-|----------------------|------------------------------------------|
-| Cumulative Reward    | Total reward collected by agent.         |
-| Average Return       | Mean reward over multiple episodes.      |
-| Convergence Rate     | Speed of learning to optimal policy.     |
+### 📏 Evaluation Metrics:
+- Cumulative Reward  
+- Average Return per Episode  
+- Learning Speed (Convergence Rate)
 
 ---
 
 ## 📗 4. Semi-Supervised Learning
 
 ### ✅ Definition:
-Semi-Supervised Learning combines a **small amount of labeled data** with a **large amount of unlabeled data**. It aims to leverage the unlabeled data to improve learning accuracy.
+Uses **a small amount of labeled data** with **a large amount of unlabeled data** to improve learning accuracy.
 
 ### 🎯 Goal:
-To improve prediction by utilizing both labeled and unlabeled data.
+To combine **efficiency of unlabeled data** with **accuracy from labeled data**.
 
-### 🔧 Common Algorithms:
-| Algorithm                | Description                                               |
-|--------------------------|-----------------------------------------------------------|
-| Self-Training            | Uses model’s own predictions to label unlabeled data.     |
-| Co-Training              | Trains two classifiers on different views of the data.    |
-| Label Propagation        | Propagates labels from labeled to unlabeled data.         |
-| Semi-Supervised SVM      | Extends SVMs to unlabeled data.                          |
-| Graph-Based Methods      | Utilizes graphs to find label spreading over nodes.       |
+---
+
+### 📊 Semi-Supervised Learning Techniques
+
+| Approach                | Description                                                | Common Algorithms                                             |
+|-------------------------|------------------------------------------------------------|---------------------------------------------------------------|
+| **Self-Training**       | Model iteratively labels unlabeled data                    | ✅ Any classifier with confidence thresholds (e.g., SVM, RF)  |
+| **Co-Training**         | Two models train on different views/features               | ✅ Logistic Regression + Decision Tree                        |
+| **Label Propagation**   | Spreads labels in a graph-based structure                  | ✅ Label Propagation <br> ✅ Label Spreading                  |
+| **Semi-Supervised SVM** | SVMs adapted to exploit unlabeled data                     | ✅ Transductive SVM (TSVM)                                    |
 
 ### 🧪 Use Cases:
-- Medical image classification (where labeling is expensive)
-- Speech recognition
-- Web content classification
-- Document categorization
+- Image recognition (few labeled images)
+- Medical diagnostics (where labeled data is expensive)
+- Web page classification
 
-### 📊 Evaluation Metrics:
-Uses the same metrics as supervised learning (Accuracy, F1, etc.) but often includes:
-- **Learning Curve Analysis**
-- **Label Efficiency** (performance with limited labeled data)
+### 📏 Evaluation Metrics:
+- Same as Supervised Learning (Accuracy, F1 Score, etc.)
+- **Label Efficiency**: Performance improvement per number of labeled examples
 
 ---
 
 ## 📌 Summary Table
 
-| Type                | Data Type        | Algorithms                            | Use-Cases                            | Metrics                             |
-|---------------------|------------------|----------------------------------------|--------------------------------------|--------------------------------------|
-| **Supervised**      | Labeled           | LR, SVM, DT, RF, NN                   | Spam detection, house price prediction | Accuracy, F1, MSE, R²                |
-| **Unsupervised**    | Unlabeled         | K-Means, DBSCAN, PCA, t-SNE           | Clustering, anomaly detection         | Silhouette Score, CH Index          |
-| **Reinforcement**   | Agent-based       | Q-Learning, DQN, SARSA, Actor-Critic  | Robotics, gaming, self-driving cars   | Reward, Convergence, Return         |
-| **Semi-Supervised** | Few labeled + unlabeled | Self-Training, Co-Training        | Medical, web categorization           | Accuracy, Label Efficiency          |
+| ML Type                | Task                     | Algorithm Examples                                | Use-Cases                        | Metrics                      |
+|------------------------|--------------------------|---------------------------------------------------|----------------------------------|------------------------------|
+| **Supervised**         | Classification           | SVM, RF, KNN, Logistic Regression, Neural Net     | Spam detection, disease diagnosis| Accuracy, F1, ROC-AUC        |
+|                        | Regression               | Linear Regression, SVR, RF Regressor, XGBoost     | House price prediction           | MSE, RMSE, R² Score          |
+| **Unsupervised**       | Clustering               | K-Means, DBSCAN, GMM, Agglomerative               | Market segmentation              | Silhouette Score, DB Index   |
+|                        | Dimensionality Reduction | PCA, t-SNE, Autoencoders                          | Feature reduction, visualization | Explained Variance           |
+| **Reinforcement**      | Sequential Decision-Making| Q-Learning, DQN, PPO, Actor-Critic               | Robotics, Games, Trading         | Total Reward, Avg. Return    |
+| **Semi-Supervised**    | Mixed (Few Labels)       | Self-training, Co-training, Label Propagation     | Image classification, NLP        | Accuracy, Label Efficiency   |
 
 ---
 
 ## 📚 References
 
-- [DeepLearning.ai ML Specialization](https://www.deeplearning.ai/)
+- [DeepLearning.ai](https://www.deeplearning.ai/)
 - [Scikit-learn Documentation](https://scikit-learn.org/)
-- Sutton, R. S., & Barto, A. G. (2018). *Reinforcement Learning: An Introduction*.
-- Bishop, C. M. (2006). *Pattern Recognition and Machine Learning*.
+- Sutton & Barto (2018). *Reinforcement Learning: An Introduction*
+- Hastie, Tibshirani, and Friedman (2009). *The Elements of Statistical Learning*
 
 ---
 
-> ✍️ *Feel free to fork this repository and enhance the examples with real-world datasets using Scikit-learn, TensorFlow, or PyTorch!*
+> ✍️ *Feel free to fork and modify this document. Add practical code examples using Scikit-learn, PyTorch, or TensorFlow to create a fully functional ML guide.*
