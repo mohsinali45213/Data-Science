@@ -150,8 +150,8 @@ To combine **efficiency of unlabeled data** with **accuracy from labeled data**.
 
 | Algorithm                    | Import Statement                                  | ML Type(s)              | Learning Type |
 |-----------------------------|-------------------------------------------------|------------------------|---------------|
-| LinearRegression            | ```from sklearn.linear_model import LinearRegression``` | Regression             | Supervised    |
-| LogisticRegression          | ```from sklearn.linear_model import LogisticRegression``` | Classification         | Supervised    |
+| LinearRegression            | from sklearn.linear_model import LinearRegression | Regression             | Supervised    |
+| LogisticRegression          | from sklearn.linear_model import LogisticRegression | Classification         | Supervised    |
 | Ridge                      | from sklearn.linear_model import Ridge           | Regression             | Supervised    |
 | Lasso                      | from sklearn.linear_model import Lasso           | Regression             | Supervised    |
 | ElasticNet                 | from sklearn.linear_model import ElasticNet      | Regression             | Supervised    |
@@ -178,4 +178,41 @@ To combine **efficiency of unlabeled data** with **accuracy from labeled data**.
 | KMeans                     | from sklearn.cluster import KMeans                 | Clustering             | Unsupervised  |
 | DBSCAN                     | from sklearn.cluster import DBSCAN                 | Clustering             | Unsupervised  |
 | AgglomerativeClustering    | from sklearn.cluster import AgglomerativeClustering | Clustering           | Unsupervised  |
+
+
+
+
+
+
+
+| Algorithm                    | When to Use                                                   | When NOT to Use                                                                             |
+|------------------------------|---------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| LinearRegression             | Predicting continuous values with linear relationships.        | Avoid if the relationship is highly non-linear or there are many outliers.                  |
+| LogisticRegression           | Binary/multiclass classification with linearly separable data. | Avoid if classes are not linearly separable or for very large, complex feature spaces without kernel tricks. |
+| Ridge                        | Regularized linear regression to prevent overfitting.          | Not ideal if feature selection or sparsity is needed (use Lasso instead).                   |
+| Lasso                        | Linear regression with feature selection by coefficient shrinkage. | Can be unstable if features are highly correlated; might drop important correlated features. |
+| ElasticNet                   | Balances Ridge and Lasso for linear regression with regularization. | Avoid if interpretability is primary goal or if non-linear relationships dominate.           |
+| KNeighborsClassifier         | Simple classification when data is small and well-separated.   | Avoid with very large or high-dimensional datasets (curse of dimensionality) or noisy data.  |
+| KNeighborsRegressor          | Non-linear regression with instance-based approach.            | Not suitable for large datasets or very noisy data; prediction can be slow.                  |
+| SVC (Support Vector Classifier) | Classification with clear class separation in high-dimensional data. | Avoid on very large datasets due to high computational cost; struggles with noisy, overlapping classes. |
+| SVR (Support Vector Regressor)  | Regression in high-dimensional spaces with non-linear functions. | Avoid for very large datasets; sensitive to hyperparameters and scaling.                     |
+| LinearSVC                    | Fast linear classification.                                   | Poor choice if data is not linearly separable or complex nonlinear decision boundaries exist.|
+| LinearSVR                    | Linear regression requiring fast computation.                 | Avoid when data relationships are highly non-linear or contain outliers.                     |
+| DecisionTreeClassifier       | Interpretable classification, handling non-linearity and categorical features. | Avoid deep trees on small datasets due to overfitting; unstable with small data variations.  |
+| DecisionTreeRegressor        | Regression with interpretability and non-linear relationships. | Avoid deep trees on limited data to prevent overfitting; sensitive to noisy data.            |
+| RandomForestClassifier       | Robust classification with complex relationships.              | Avoid models requiring high interpretability; can be slow for real-time predictions.         |
+| RandomForestRegressor        | Non-linear regression handling interactions well.              | Same as classifier; not suitable if model transparency is critical or if very fast predictions needed. |
+| GradientBoostingClassifier   | Highly accurate classification through boosting.               | Avoid if training speed is a concern; sensitive to noisy data and outliers.                  |
+| GradientBoostingRegressor    | Powerful regression improving by sequentially fitting residuals. | Avoid if data is very noisy or if tuning is not feasible due to complexity.                  |
+| AdaBoostClassifier           | Boosting weak classifiers for noisy datasets.                  | Poor performance if base learners are too complex; sensitive to outliers.                    |
+| AdaBoostRegressor            | Boosted regression to handle bias-prone tasks.                 | Avoid if data is very noisy or weak learners are inappropriate.                              |
+| GaussianNB                   | Classification with Gaussian-distributed numeric features.     | Avoid if feature independence assumption is violated or distributions are not Gaussian-like. |
+| BernoulliNB                  | Binary/boolean features classification.                        | Ineffective for continuous or highly correlated features.                                    |
+| MultinomialNB                | Text or count-based classification (e.g., document classification). | Not suitable for continuous features or non-count data.                                       |
+| MLPClassifier (Neural Network)| Complex classification with non-linear decision boundaries.   | Avoid if dataset is small (overfitting risk); requires tuning and longer training time.      |
+| MLPRegressor (Neural Network)| Non-linear regression with neural networks.                   | Avoid on small datasets or when interpretability is needed; sensitive to feature scaling.    |
+| PCA (Principal Component Analysis) | Dimensionality reduction for visualization or preprocessing. | Not effective if variance is not meaningful or if components lack interpretability.           |
+| KMeans                       | Partitioning data into k spherical clusters of similar size.   | Avoid with clusters of varying density/shape; sensitive to outliers and requires k preset.   |
+| DBSCAN                       | Density-based clustering for arbitrary shapes and noise.       | Not suitable for varying density clusters or very high-dimensional spaces without preprocessing. |
+| AgglomerativeClustering      | Hierarchical clustering to understand nested data structures.  | Poor scalability with very large datasets; sensitive to noise and requires distance metric choice. |
 
