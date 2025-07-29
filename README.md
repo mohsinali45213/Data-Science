@@ -147,4 +147,92 @@ To combine **efficiency of unlabeled data** with **accuracy from labeled data**.
 
 ---
 
+
+
+Certainly! Here is a sample **README.md** file that documents both tables you referenced — the table with Algorithm, Import Statement, ML Type(s), Learning Type, and the table with When NOT to Use guidance. The README is formatted to clearly explain the content and usage of these tables for scikit-learn algorithms.
+
+```markdown
+# Scikit-Learn Algorithms Reference
+
+This repository provides a concise reference guide for commonly used **scikit-learn** algorithms, their import statements, machine learning types, learning types (supervised or unsupervised), and practical recommendations for when NOT to use each algorithm.
+
+## Tables Included
+
+### 1. Algorithm Overview Table
+
+This table lists popular scikit-learn algorithms with four key details:
+
+| Field              | Description                                                         |
+|--------------------|---------------------------------------------------------------------|
+| **Algorithm**      | Name of the scikit-learn algorithm or utility                       |
+| **Import Statement**| Python import statement to use the algorithm                        |
+| **ML Type(s)**     | The type of machine learning task it performs (Classification, Regression, Clustering, Dimensionality Reduction) |
+| **Learning Type**  | Whether the algorithm is used for Supervised or Unsupervised learning |
+
+This overview helps users quickly identify and import the appropriate scikit-learn class based on their machine learning problem type.
+
+### 2. When NOT to Use Table
+
+This table complements the overview by providing scenarios and limitations when each algorithm is **not recommended**. It helps avoid common pitfalls and guides users to choose algorithms better suited to their specific data characteristics and goals.
+
+| Field              | Description                                                         |
+|--------------------|---------------------------------------------------------------------|
+| **Algorithm**      | Name of the algorithm                                               |
+| **When NOT to Use** | Typical scenarios or limitations where the algorithm might perform poorly or be inappropriate |
+
+---
+
+## How to Use This Reference
+
+1. **Algorithm Selection:**
+   - Use the first table to find algorithms by ML task (e.g., Classification or Regression).
+   - Check if the algorithm is supervised or unsupervised.
+   - Copy the import statement directly into your Python project.
+
+2. **Avoiding Pitfalls:**
+   - Consult the "When NOT to Use" table to understand limitations.
+   - Prevent applying unsuitable algorithms to your data.
+
+3. **Extending the Reference:**
+   - This reference is not exhaustive. Feel free to add more algorithms or expand with additional details.
+   - Complement with scikit-learn official documentation for newest releases and advanced configurations.
+
+---
+
+## Example Excerpt
+
+| Algorithm                | Import Statement                                   | ML Type(s)                | Learning Type |
+|--------------------------|--------------------------------------------------|---------------------------|---------------|
+| LinearRegression         | from sklearn.linear_model import LinearRegression | Regression               | Supervised    |
+| KMeans                  | from sklearn.cluster import KMeans                  | Clustering              | Unsupervised  |
+
+**When NOT to Use - Linear Regression**
+
+- Avoid if the relationship between features and target is highly non-linear.
+- Not suitable if there are many outliers.
+
+**When NOT to Use - KMeans**
+
+- Avoid with clusters of varying density or shape.
+- Not robust to outliers and noise.
+
+---
+
+## License
+
+This reference guide is provided for educational and practical use. Please refer to the [scikit-learn](https://scikit-learn.org) license for the underlying library usage.
+
+---
+
+## Contact
+
+For questions or suggestions, please open an issue or contact the maintainer.
+
+---
+
+*Generated on July 29, 2025*
+```
+
+If you'd like, I can prepare the README content as a downloadable file or in other formats as well. Let me know!
+
 > ✍️ *Feel free to fork and modify this document. Add practical code examples using Scikit-learn, PyTorch, or TensorFlow to create a fully functional ML guide.*
