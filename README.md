@@ -150,8 +150,8 @@ To combine **efficiency of unlabeled data** with **accuracy from labeled data**.
 
 | Algorithm                    | Import Statement                                  | ML Type(s)              | Learning Type |
 |-----------------------------|-------------------------------------------------|------------------------|---------------|
-| LinearRegression            | from sklearn.linear_model import LinearRegression | Regression             | Supervised    |
-| LogisticRegression          | from sklearn.linear_model import LogisticRegression | Classification         | Supervised    |
+| LinearRegression            | ```from sklearn.linear_model import LinearRegression``` | Regression             | Supervised    |
+| LogisticRegression          | ```from sklearn.linear_model import LogisticRegression``` | Classification         | Supervised    |
 | Ridge                      | from sklearn.linear_model import Ridge           | Regression             | Supervised    |
 | Lasso                      | from sklearn.linear_model import Lasso           | Regression             | Supervised    |
 | ElasticNet                 | from sklearn.linear_model import ElasticNet      | Regression             | Supervised    |
