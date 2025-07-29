@@ -148,36 +148,36 @@ To combine **efficiency of unlabeled data** with **accuracy from labeled data**.
 > ✍️ *Feel free to fork and modify this document. Add practical code examples using Scikit-learn, PyTorch, or TensorFlow to create a fully functional ML guide.*
 
 
-| Algorithm                    | Import Statement                                  | ML Type(s)              | Learning Type |
-|-----------------------------|-------------------------------------------------|------------------------|---------------|
-| LinearRegression            | from sklearn.linear_model import LinearRegression | Regression             | Supervised    |
-| LogisticRegression          | from sklearn.linear_model import LogisticRegression | Classification         | Supervised    |
-| Ridge                      | from sklearn.linear_model import Ridge           | Regression             | Supervised    |
-| Lasso                      | from sklearn.linear_model import Lasso           | Regression             | Supervised    |
-| ElasticNet                 | from sklearn.linear_model import ElasticNet      | Regression             | Supervised    |
-| KNeighborsClassifier       | from sklearn.neighbors import KNeighborsClassifier | Classification         | Supervised    |
-| KNeighborsRegressor        | from sklearn.neighbors import KNeighborsRegressor | Regression             | Supervised    |
-| SVC (Support Vector Classifier) | from sklearn.svm import SVC                   | Classification         | Supervised    |
-| SVR (Support Vector Regressor)  | from sklearn.svm import SVR                   | Regression             | Supervised    |
-| LinearSVC                  | from sklearn.svm import LinearSVC                 | Classification         | Supervised    |
-| LinearSVR                  | from sklearn.svm import LinearSVR                 | Regression             | Supervised    |
-| DecisionTreeClassifier     | from sklearn.tree import DecisionTreeClassifier   | Classification         | Supervised    |
-| DecisionTreeRegressor      | from sklearn.tree import DecisionTreeRegressor    | Regression             | Supervised    |
-| RandomForestClassifier     | from sklearn.ensemble import RandomForestClassifier | Classification         | Supervised    |
-| RandomForestRegressor      | from sklearn.ensemble import RandomForestRegressor | Regression             | Supervised    |
-| GradientBoostingClassifier | from sklearn.ensemble import GradientBoostingClassifier | Classification     | Supervised    |
-| GradientBoostingRegressor  | from sklearn.ensemble import GradientBoostingRegressor | Regression           | Supervised    |
-| AdaBoostClassifier         | from sklearn.ensemble import AdaBoostClassifier    | Classification         | Supervised    |
-| AdaBoostRegressor          | from sklearn.ensemble import AdaBoostRegressor     | Regression             | Supervised    |
-| GaussianNB                 | from sklearn.naive_bayes import GaussianNB         | Classification         | Supervised    |
-| BernoulliNB                | from sklearn.naive_bayes import BernoulliNB        | Classification         | Supervised    |
-| MultinomialNB              | from sklearn.naive_bayes import MultinomialNB      | Classification         | Supervised    |
-| MLPClassifier (Neural Network) | from sklearn.neural_network import MLPClassifier | Classification         | Supervised    |
-| MLPRegressor (Neural Network)  | from sklearn.neural_network import MLPRegressor  | Regression             | Supervised    |
-| PCA (Principal Component Analysis) | from sklearn.decomposition import PCA        | Dimensionality Reduction | Unsupervised  |
-| KMeans                     | from sklearn.cluster import KMeans                 | Clustering             | Unsupervised  |
-| DBSCAN                     | from sklearn.cluster import DBSCAN                 | Clustering             | Unsupervised  |
-| AgglomerativeClustering    | from sklearn.cluster import AgglomerativeClustering | Clustering           | Unsupervised  |
+| Algorithm                    | Import Statement                                   | ML Type(s)               | Learning Type |
+|-----------------------------|--------------------------------------------------|--------------------------|---------------|
+| LinearRegression            | `from sklearn.linear_model import LinearRegression` | Regression               | Supervised    |
+| LogisticRegression          | `from sklearn.linear_model import LogisticRegression` | Classification           | Supervised    |
+| Ridge                      | `from sklearn.linear_model import Ridge`          | Regression               | Supervised    |
+| Lasso                      | `from sklearn.linear_model import Lasso`          | Regression               | Supervised    |
+| ElasticNet                 | `from sklearn.linear_model import ElasticNet`     | Regression               | Supervised    |
+| KNeighborsClassifier       | `from sklearn.neighbors import KNeighborsClassifier` | Classification           | Supervised    |
+| KNeighborsRegressor        | `from sklearn.neighbors import KNeighborsRegressor` | Regression               | Supervised    |
+| SVC (Support Vector Classifier) | `from sklearn.svm import SVC`                    | Classification           | Supervised    |
+| SVR (Support Vector Regressor)  | `from sklearn.svm import SVR`                    | Regression               | Supervised    |
+| LinearSVC                  | `from sklearn.svm import LinearSVC`                | Classification           | Supervised    |
+| LinearSVR                  | `from sklearn.svm import LinearSVR`                | Regression               | Supervised    |
+| DecisionTreeClassifier     | `from sklearn.tree import DecisionTreeClassifier`  | Classification           | Supervised    |
+| DecisionTreeRegressor      | `from sklearn.tree import DecisionTreeRegressor`   | Regression               | Supervised    |
+| RandomForestClassifier     | `from sklearn.ensemble import RandomForestClassifier` | Classification           | Supervised    |
+| RandomForestRegressor      | `from sklearn.ensemble import RandomForestRegressor` | Regression               | Supervised    |
+| GradientBoostingClassifier | `from sklearn.ensemble import GradientBoostingClassifier` | Classification         | Supervised    |
+| GradientBoostingRegressor  | `from sklearn.ensemble import GradientBoostingRegressor` | Regression             | Supervised    |
+| AdaBoostClassifier         | `from sklearn.ensemble import AdaBoostClassifier`   | Classification           | Supervised    |
+| AdaBoostRegressor          | `from sklearn.ensemble import AdaBoostRegressor`    | Regression               | Supervised    |
+| GaussianNB                 | `from sklearn.naive_bayes import GaussianNB`        | Classification           | Supervised    |
+| BernoulliNB                | `from sklearn.naive_bayes import BernoulliNB`       | Classification           | Supervised    |
+| MultinomialNB              | `from sklearn.naive_bayes import MultinomialNB`     | Classification           | Supervised    |
+| MLPClassifier (Neural Network) | `from sklearn.neural_network import MLPClassifier` | Classification           | Supervised    |
+| MLPRegressor (Neural Network)  | `from sklearn.neural_network import MLPRegressor`  | Regression               | Supervised    |
+| PCA (Principal Component Analysis) | `from sklearn.decomposition import PCA`          | Dimensionality Reduction | Unsupervised  |
+| KMeans                     | `from sklearn.cluster import KMeans`                  | Clustering             | Unsupervised  |
+| DBSCAN                     | `from sklearn.cluster import DBSCAN`                  | Clustering             | Unsupervised  |
+| AgglomerativeClustering    | `from sklearn.cluster import AgglomerativeClustering` | Clustering             | Unsupervised  |
 
 
 
